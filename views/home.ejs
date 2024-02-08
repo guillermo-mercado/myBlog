@@ -1,0 +1,70 @@
+<%- include("partials/header.ejs") %>
+
+    <h1 class="welcome">Welcome to myBlog </h1>
+
+    <div class="home-container">
+        <div class="home-paragraph">
+            <p>
+                Welcome to the digital pages of my diary, where I invite you to step into the world of a software
+                developer
+                navigating the bustling tech landscape of the United Kingdom as a foreigner. Within these lines, I share
+                the
+                musings, challenges, triumphs, and reflections encountered on my journey through the ever-evolving realm
+                of
+                technology.</p>
+            <p>
+                As an immigrant in the UK, every line of code I write is infused with the echoes of my cultural
+                heritage,
+                blending seamlessly with the vibrant tapestry of British innovation. This blog serves as a chronicle of
+                my
+                experiences, a repository of insights gleaned from the trenches of software development, and a testament
+                to
+                the
+                boundless possibilities that emerge when diverse perspectives converge.
+            </p>
+
+            <p>
+                From the cobblestone streets of historic towns to the glass-and-steel skyscrapers of modern cities, my
+                diary
+                transcends geographical boundaries, offering a glimpse into the life of a nomadic coder striving to
+                leave an
+                indelible mark on the digital landscape.</p>
+            <p>
+                Join me on this journey as we unravel the complexities of software architecture, explore the intricacies
+                of
+                programming languages, and delve into the profound impact of technology on society. Whether you're a
+                seasoned
+                developer, an aspiring coder, or simply a curious soul eager to explore the intersection of culture and
+                technology, there's something here for everyone.</p>
+            <p>
+                So, dear reader, fasten your seatbelt and embark on this exhilarating odyssey with me. Together, let's
+                navigate
+                the labyrinth of lines and algorithms that define the modern software developer's existence, one byte at
+                a
+                time.
+            </p>
+        </div>
+    </div>
+
+    <% if (posts=="" ){%>
+        <h3 class="welcome">There is no post yet</h3>
+
+        <% }else {%>
+            <h3 class="welcome">Last posts</h3>
+            <div class="homePosted-container">
+                <div class="home-posted">
+
+                    <% for(var i=0; i<posts.length; i++){ %>
+                        <h3>
+                            <%= posts[i].title %>
+                                <h6>Posted on <%= posts[i].date.toLocaleDateString("en-GB"); %>
+                                </h6>
+                        </h3>
+                        <p>
+                            <%= posts[i].content %>
+                        </p>
+                        <% } %>
+                            <% } %>
+                </div>
+            </div>
+            <%- include("partials/footer.ejs") %>

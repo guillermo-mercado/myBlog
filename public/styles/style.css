@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.welcome {
+    margin: 50px;
+    margin-left: 80px;
+    width: fit-content;
+
+}
+
+.home-paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+    text-align: justify;
+    /* For Edge */
+    -moz-text-align-last: justify;
+    /* For Firefox prior 58.0 */
+    text-align-last: left;
+}
+
+.container-compose {
+    display: flex;
+    justify-content: center;
+}
+
+.compose-title {
+    margin-left: 290px;
+}
+
+.compose {
+    background-color: #FBF9F1;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: flex-start;
+    height: 50vh;
+    width: 75%;
+    border-radius: 20px;
+}
+
+.home-posted {
+    width: 60%;
+
+}
+
+.homePosted-container {
+    display: flex;
+    justify-content: center;
+}
